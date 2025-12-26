@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyPortfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #222;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background: #0d6efd;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      position: sticky;
+      top: 0;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 4px solid #0d6efd;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .about-text {
+      max-width: 720px;
+      margin: 0 auto 30px;
+      color: #555;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .hero a {
+      background: #0d6efd;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 50px;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 28px;
+    }
+
+    /* PORTFOLIO */
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      background: #f0f0f0;
+      margin-bottom: 15px;
+    }
+
+    /* SKILLS */
+    .skills {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .skill-box {
+      padding: 20px 40px;
+      border: 2px solid #0d6efd;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+      background: #fff;
+    }
+
+    .skill-box:hover,
+    .skill-box.active {
+      background: #0d6efd;
+      color: #fff;
+      transform: translateY(-5px);
+    }
+
+    /* CONTACT */
+    .contact {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .contact button {
+      width: 100%;
+      padding: 12px;
+      background: #0d6efd;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #0d6efd;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <h1>MyPortfolio</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero" id="home">
+    <img src="profil.jpg" alt="Profile">
+    <h2>Nayla Azzahra</h2>
+
+    <p class="about-text">
+      Saya adalah mahasiswa Sistem Informasi yang memiliki minat pada pengembangan
+      website dan desain antarmuka. Saya terbiasa menggunakan HTML, CSS, Bootstrap,
+      dan JavaScript untuk membuat website yang sederhana, rapi, dan mudah digunakan.
+      Selain itu, saya tertarik mengembangkan website di bidang fashion, khususnya
+      baju wanita seperti tunik, cardigan, dan dress melalui brand Nayla Fashion.
+    </p>
+
+    <a href="#portfolio">Lihat Karya Saya</a>
+  </div>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio">
+      <div class="card">
+        <img src="mockup.jpg">
+        <h3>Project 1</h3>
+        <p>Mockup website.</p>
+      </div>
+      <div class="card">
+        <img src="variable.jpg">
+        <h3>Project 2</h3>
+        <p>Perhitungan variabel.</p>
+      </div>
+      <div class="card">
+        <img src="web profile.jpg">
+        <h3>Project 3</h3>
+        <p>tampilan web profile.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill-box" onclick="toggleSkill(this)">HTML</div>
+      <div class="skill-box" onclick="toggleSkill(this)">CSS</div>
+      <div class="skill-box" onclick="toggleSkill(this)">Bootstrap</div>
+      <div class="skill-box" onclick="toggleSkill(this)">JavaScript</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact">
+      <div class="form-group">
+        <label>Nama</label>
+        <input type="text" placeholder="Nayla Azzahra">
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="Naylaazzahra@gmail.com">
+      </div>
+      <div class="form-group">
+        <label>Pesan</label>
+        <textarea placeholder="Tulis pesan..."></textarea>
+      </div>
+      <button>Kirim Pesan</button>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Nayla Azzahra
+  </footer>
+
+  <script>
+    function toggleSkill(el) {
+      el.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
